@@ -2,7 +2,7 @@
 !(import! &self llm_summary)
 !(import! &self new_MeTTa_project:nodes)
 
-(= (h )(match &self 
+(= (new )(match &self 
        (gene_type (gene $gen) $type) 
        (match &self (chr (gene $gen) $chr) 
        (match &self (start (gene $gen) $start) 
@@ -12,4 +12,4 @@
        ((gene_summarizer $gen (gene $gen $type $chr $start $end $name $synonyms))))))))
   ))
 
-!(h)
+!(new)
