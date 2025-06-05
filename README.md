@@ -27,48 +27,47 @@ Install requirements:
 ```bash
 pip install requests python-dotenv hyperon
 ```
-🔐 Environment Setup
-Create a .env file in the root directory with the following:
+## 🔐 Environment Setup
+Create a `.env` file in the root directory with the following:
+
+```env
 OPENROUTER_API_KEY=your_api_key_here
-⚙️ How It Works
-Extracts structured gene data using MeTTa patterns
+```
+## ⚙️ How It Works
+- Extracts structured gene data using MeTTa patterns
 
-Sends the gene data to the LLM via the OpenRouter API
+- Sends the gene data to the LLM via the OpenRouter API
 
-Receives and logs the LLM's 2-sentence summary
+- Receives and logs the LLM's 2-sentence summary
 
-Saves outputs in:
+- Saves outputs in:
 
-gene_summary.csv (tabular format)
+- gene_summary.csv (tabular format)
 
-gene_summary.metta (MeTTa-compatible structure)
+- gene_summary.metta (MeTTa-compatible structure)
 
-Example .metta output:
 
-metta
+## 📤 Output Examples
 
-(gene_summary (gene ENSG00000128245) "The gene ENSG00000128245 encodes for the YWHAH protein...")
+**CSV Output:**
 
-📤 Output Example
-CSV:
+| ID               | Summary |
+|------------------|---------|
+| ENSG00000175793  | "The gene ENSG00000175793 encodes the protein SFN, also known as stratifin..." |
+| ENSG00000128245  | "The gene ENSG00000128245 encodes for the YWHAH protein..." |
 
-csv:
-ID,Summary
-ENSG00000175793,"The gene ENSG00000175793 encodes the protein SFN, also known as stratifin..."
-MeTTa:
-
-metta
-
+**MeTTa Output:**
+```metta
 (gene_summary (gene ENSG00000175793) "The gene ENSG00000175793 encodes the protein SFN...")
-📄 License
-MIT License. See LICENSE file.
+(gene_summary (gene ENSG00000128245) "The gene ENSG00000128245 encodes for the YWHAH protein...")
+```
 
-📚 References & Resources
-🔗 https://github.com/iCog-Labs-Dev/metta-attention/blob/dev/experiments/utils/logger.py
+## 📚 References & Resources
+- 🔗 https://github.com/iCog-Labs-Dev/metta-attention/blob/dev/experiments/utils/logger.py
 
-🔗 https://metta-lang.dev/docs/learn/learn.html
+- 🔗 https://metta-lang.dev/docs/learn/learn.html
 
-🔗https://github.com/iCog-Labs-Dev/metta-attention/blob/dev/experiments/logger.metta
+- 🔗https://github.com/iCog-Labs-Dev/metta-attention/blob/dev/experiments/logger.metta
 
-🔗 Meta AI: LLaMA 3
+- 🔗 Meta AI: LLaMA 3
 
