@@ -1,50 +1,41 @@
-echo "# MeTTa Project" > README.md
-🧬 Gene Summary Generator using LLMs and MeTTa
+# 🧬 Gene Summary Generator using LLMs and MeTTa
+
 This project uses a Large Language Model (LLM) to generate concise summaries of gene information extracted from structured biological data. It integrates the OpenRouter API, Hyperon, and MeTTa language to enable semantic querying, summarization, and structured reasoning.
 
-🚀 Features
-🔬 Gene Data Summarization using Meta LLaMA-3 via OpenRouter API.
+## 🚀 Features
+- **🔬 Gene Data Summarization**: Using Meta LLaMA-3 via OpenRouter API
+- **📁 CSV Export**: Stores each gene's summary alongside its ID
+- **🧠 MeTTa Knowledge Base**: Automatically appends summaries into a .metta file for symbolic reasoning
+- **🛠️ Hyperon Atom Registration**: Registers custom summarization logic as MeTTa atoms
 
-📁 CSV Export: Stores each gene's summary alongside its ID.
+## 📂 Project Structure
 
-🧠 MeTTa Knowledge Base: Automatically appends summaries into a .metta file for symbolic reasoning.
-
-🛠️ Hyperon Atom Registration: Registers custom summarization logic as MeTTa atoms.
-
-📂 Project Structure
-bash
-Copy
-Edit
 new_MeTTa_project/
-├── gene_summary.csv         # Stores gene ID and their summaries
-├── gene_summary.metta       # Contains summaries in MeTTa format
-├── llm_summary.py            # Main script integrating API and Hyperon atoms
-├── .env                     # Your secret API key for OpenRouter
-└── README.md                # Project documentation
-🧪 Requirements
-Python 3.8+
+├── gene_summary.csv # Stores gene ID and their summaries
+├── gene_summary.metta # Contains summaries in MeTTa format
+├── llm_summary.py # Main script integrating API and Hyperon atoms
+├── .env # Your secret API key for OpenRouter
+└── README.md # Project documentation
 
-Hyperon Python bindings
-
-.env file with OpenRouter API key
-
-requests, python-dotenv, and hyperon packages
+## 🧪 Requirements
+- Python 3.8+
+- Hyperon Python bindings
+- .env file with OpenRouter API key
+- requests, python-dotenv, and hyperon packages
 
 Install requirements:
-
+```bash
 pip install requests python-dotenv hyperon
+```
 🔐 Environment Setup
 Create a .env file in the root directory with the following:
-
-env
-
 OPENROUTER_API_KEY=your_api_key_here
 ⚙️ How It Works
-Extracts structured gene data using MeTTa patterns.
+Extracts structured gene data using MeTTa patterns
 
-Sends the gene data to the LLM via the OpenRouter API.
+Sends the gene data to the LLM via the OpenRouter API
 
-Receives and logs the LLM's 2-sentence summary.
+Receives and logs the LLM's 2-sentence summary
 
 Saves outputs in:
 
