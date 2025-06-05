@@ -11,11 +11,11 @@ This project uses a Large Language Model (LLM) to generate concise summaries of 
 ## 📂 Project Structure
 
 new_MeTTa_project/
-├── gene_summary.csv # Stores gene ID and their summaries
-├── gene_summary.metta # Contains summaries in MeTTa format
-├── llm_summary.py # Main script integrating API and Hyperon atoms
-├── .env # Your secret API key for OpenRouter
-└── README.md # Project documentation
+- ├── gene_summary.csv # Stores gene ID and their summaries
+- ├── gene_summary.metta # Contains summaries in MeTTa format
+- ├── llm_summary.py # Main script integrating API and Hyperon atoms
+- ├── .env # Your secret API key for OpenRouter
+- └── README.md # Project documentation
 
 ## 🧪 Requirements
 - Python 3.8+
